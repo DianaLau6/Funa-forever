@@ -1,0 +1,358 @@
+/* GENERAL STYLES */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    color: #000;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 900;
+  }
+  
+  .nav-icons .icon {
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 50px;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .hero-text button {
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .hero-image img {
+    width: 600px;
+  } 
+
+  _______________________________________________________________________________________________
+
+  /* CURSOS SECTION */
+.cursos-section {
+    padding: 80px 50px;
+    background-color: #fff;
+  }
+  
+  .cursos-title {
+    text-align: center;
+    font-size: 36px;
+    color: #007c59;
+    position: relative;
+  }
+  
+  .cursos-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #007c59;
+    margin: 10px auto;
+    border-radius: 3px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+  }
+  
+  .filter-buttons button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+  
+  .cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    height: 500px;
+  }
+  
+  .curso-card {
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: rgb(190, 190, 190);
+    transition: transform 0.2s;
+    margin: 20px;
+  }
+  
+  .curso-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .curso-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .curso-info {
+    padding: 20px;
+  }
+  
+  .top-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: gray;
+  }
+  
+  .curso-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007c59;
+  }
+  
+  .curso-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .price .actual {
+    color: #e66100;
+  }
+  
+  .price .old {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .curso-info button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007c59;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  } 
+
+  /* DOCENTES SECTION */
+.docentes-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    padding: 10px 50px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    height: 700px;
+  }
+  
+  .docentes-left {
+    flex: 1;
+    max-width: 40%;
+    margin-top: 40px;
+  }
+  
+  .docentes-left .tag {
+    display: inline-block;
+    background-color: #10b981;
+    color: white;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .docentes-left h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #111827;
+  }
+  
+  .docentes-left p {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 30px;
+    max-width: 90%;
+  }
+  
+  .docentes-buttons button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .docentes-buttons .green {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .docentes-buttons .dark {
+    background-color: #1f2937;
+    color: white;
+  }
+  
+  .docentes-right {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 60%;
+  }
+  
+  .docente-card {
+    position: relative;
+    border: 2px solid #10b981;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .docente-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+  
+  .docente-card .share {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .docente-card .info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+  }
+  
+  .docente-card .info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .docente-card .info span {
+    font-size: 12px;
+    color: #6b7280;
+  }  
+
+  .contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.seccion-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.seccion-cita {
+    padding: 20px;
+    background-color: rgba(0, 128, 128, 0.8);
+    border-radius: 10px;
+    color: white;
+}
+
+blockquote {
+    margin: 0;
+    padding: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.informacion-perfil {
+    display: flex;
+    flex-direction: column;
+}
+
+.informacion-perfil strong {
+    font-size: 1em;
+}
+
+.informacion-perfil span {
+    font-size: 0.8em;
+    color: #ccc;
+}
