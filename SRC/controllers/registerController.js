@@ -6,7 +6,7 @@ const registrarUsuario = async (req, res) => {
     const { correo, contraseña } = req.body;
 
     try {
-        // Encriptar la contraseña
+        
         const saltRounds = 10;
         const hashedPassword = await bcrypt.hash(contraseña, saltRounds);
 
