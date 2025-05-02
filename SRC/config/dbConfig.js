@@ -1,7 +1,6 @@
 const sql = require('mssql');
 require('dotenv').config();
 
-// Configuración de conexión usando las variables de entorno
 const dbConfig = {
     server: process.env.DB_SERVER,
     database: process.env.DB_DATABASE,
@@ -10,19 +9,25 @@ const dbConfig = {
     options: {
         encrypt: process.env.DB_ENCRYPT === 'true',
         trustServerCertificate: process.env.DB_TRUST_CERTIFICATE === 'true',
+        enableArithAbort: true // Evita warnings comunes
     },
-};
-
-const connectDB = async () => {
-    try {
-        const pool = await sql.connect(dbConfig);
-        console.log('Conexión a SQL Server exitosa');
-        return pool;
-    } catch (error) {
-        console.error('Error al conectar a SQL Server:', error);
-        throw error;
+    pool: {
+        max: 10, // Máximo de conexiones
+        min: 0,
+        idleTimeoutMillis: 30000
     }
 };
 
-// Exportamos la función para que pueda ser utilizada en otros archivos
-module.exports = connectDB;
+// Crea y exporta el pool directamente
+const poolPromise = new sql.ConnectionPool(dbConfig)
+    .connect()
+    .then(pool => {
+        console.log('Conexión a SQL Server exitosa');
+        return pool;
+    })
+    .catch(error => {
+        console.error('Error al conectar:', error);
+        throw error;
+    });
+
+module.exports = { poolPromise, sql };

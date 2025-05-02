@@ -5,6 +5,7 @@ const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const passwordRoutes = require('./routes/Passwordroutes');
 const { autenticarUsuario } = require('./middlewares/authMiddleware');
+const errorHandler = require('./middlewares/errormiddleware');
 
 const app = express();
 
@@ -37,4 +38,6 @@ app.get('/dashboard', (_req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'Dashbord.html'));
 });
 
+
+app.use(errorHandler);
 module.exports = app;
