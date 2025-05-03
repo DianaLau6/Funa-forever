@@ -1,35 +1,24 @@
 const { poolPromise, sql } = require('../config/dbConfig');
 
 const registrarError = async (errorData) => {
-    const {
-        id_usuario = null,
-        ruta,
-        metodo,
-        mensaje_error,
-        stack_trace
-    } = errorData;
-
+    const { id_usuario, ruta, metodo, mensaje, stack } = errorData;
     try {
         const pool = await poolPromise;
         const request = pool.request();
-
-        // Define parámetros con tipos explícitos
         request.input('id_usuario', sql.Int, id_usuario);
         request.input('ruta', sql.NVarChar(255), ruta);
         request.input('metodo', sql.NVarChar(10), metodo);
-        request.input('mensaje_error', sql.NVarChar(sql.MAX), mensaje_error);
-        request.input('stack_trace', sql.NVarChar(sql.MAX), stack_trace);
+        request.input('mensaje', sql.NVarChar(sql.MAX), mensaje);
+        request.input('stack', sql.NVarChar(sql.MAX), stack);
 
         await request.query(`
             INSERT INTO Log_Errors 
-                (id_usuario, fecha_hora, ruta, metodo, mensaje_error, stack_trace)
+                (id_usuario, ruta, metodo, mensaje_error, stack_trace, fecha_hora)
             VALUES 
-                (@id_usuario, GETDATE(), @ruta, @metodo, @mensaje_error, @stack_trace)
+                (@id_usuario, @ruta, @metodo, @mensaje, @stack, GETDATE())
         `);
-
-        console.log('Error registrado en la base de datos');
     } catch (err) {
-        console.error('Error al registrar el error:', err.message);
+        console.error('Error al registrar el error:', err);
     }
 };
 

@@ -1,37 +1,37 @@
-const { poolPromise, sql } = require('../config/dbConfig'); // Importa sql y poolPromise
+const { poolPromise, sql } = require('../config/dbConfig');
 
+// Consulta segura con parámetros
 const getUserByEmailWithRole = async (correo) => {
     try {
-        const pool = await poolPromise; // Usa el pool directamente
+        const pool = await poolPromise;
         const request = pool.request();
-
-        // Define el tipo de dato del parámetro (NVARCHAR para correo)
         request.input('correo', sql.NVarChar(100), correo);
 
         const result = await request.query(`
             SELECT 
                 u.id_usuario, 
                 u.contraseña, 
-                u.intentos_fallidos,
-                u.bloqueado_hasta,
                 r.nombre_rol AS rol 
-            FROM 
-                usuarios u 
-            JOIN 
-                usuario_roles ur ON u.id_usuario = ur.id_usuario 
-            JOIN 
-                roles r ON ur.id_rol = r.id_rol 
-            WHERE 
-                u.correo = @correo
+            FROM usuarios u
+            JOIN usuario_roles ur ON u.id_usuario = ur.id_usuario
+            JOIN roles r ON ur.id_rol = r.id_rol
+            WHERE u.correo = @correo
         `);
-        console.log('Resultado de la consulta:', result.recordset[0]);
-        return result.recordset[0] || null; 
-        
-
+        return result.recordset[0] || null;
     } catch (error) {
-        console.error('Error en getUserByEmailWithRole:', error);
         throw error;
     }
 };
 
-module.exports = { getUserByEmailWithRole };
+// Validación de entrada con Joi (middleware)
+const validarEntradaUsuario = (req, res, next) => {
+    const schema = Joi.object({
+        correo: Joi.string().email().required(),
+        contraseña: Joi.string().min(4).pattern().required()
+    });
+    const { error } = schema.validate(req.body);
+    if (error) return res.status(400).json({ message: error.details[0].message });
+    next();
+};
+
+module.exports = { getUserByEmailWithRole, validarEntradaUsuario };
