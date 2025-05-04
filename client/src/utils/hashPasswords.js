@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs'); // Usamos bcryptjs para el hash
-const connectDB = require('./SRC/config/dbConfig'); // La conexión a la base de datos
+const connectDB = require('../../../SRC/config/dbConfig'); // La conexión a la base de datos
 
 async function hashPasswords() {
     try {

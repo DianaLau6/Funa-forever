@@ -1,10 +1,15 @@
 {
   "name": "proyecto",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "client": "cd client && npm start",
+    "build:client": "cd client && npm run build",
+    "dev": "nodemon server.js\"npm run start\" \"npm run client\""
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",

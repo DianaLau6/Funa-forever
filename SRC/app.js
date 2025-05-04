@@ -8,38 +8,45 @@ const passwordRoutes = require('./routes/Passwordroutes');
 const { autenticarUsuario } = require('./middlewares/authMiddleware');
 const errorHandler = require('./middlewares/errormiddleware');
 
-
 const app = express();
 
-// Middleware para manejar JSON
-app.use(express.json());
+app.use(cors({
+  origin: 'http://localhost:3000', // Origen permitido
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
-// Habilitar CORS para todas las rutas
-app.use(cors());
+// Manejar preflight para todas las rutas
 app.options('*', cors());
 
-// Usar rutas
+// Middlewares
+app.use(express.json());
+
+// API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/password', autenticarUsuario, passwordRoutes); // Protegido
+app.use('/api/password', autenticarUsuario, passwordRoutes);
 
-// Ruta protegida directa
+// Ruta protegida
 app.get('/api/usuario/perfil', autenticarUsuario, (req, res) => {
-    res.json({ message: 'Bienvenido a tu perfil', usuario: req.user });
+  res.json({ message: 'Bienvenido a tu perfil', usuario: req.user });
 });
 
-// Servir vistas estáticas
-app.use(express.static(path.join(__dirname, 'views')));
+// Servir versión legacy solo en desarrollo
+if (process.env.NODE_ENV === 'development') {
+  app.use('/legacy', express.static(path.join(__dirname, 'views')));
+}
 
-// Ruta para el login (página HTML)
-app.get('/login', (_req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'login.html'));
-});
+// Configuración para producción (React)
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/dist')));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+  });
+}
 
-app.get('/dashboard', (_req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'Dashbord.html'));
-});
-
-
+// Manejo de errores
 app.use(errorHandler);
+
 module.exports = app;

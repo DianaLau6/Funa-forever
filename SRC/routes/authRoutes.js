@@ -5,6 +5,7 @@ const { loginValidation, autenticarUsuario } = require('../middlewares/authMiddl
 const authMiddleware = require('../middlewares/authMiddleware');
 const authController = require('../controllers/authController');
 const loggerMiddleware = require('../middlewares/loggermiddlaware');
+const { validarRegistro } = require('../middlewares/validationPasswordmiddleware');
 
 
 // Rutas
@@ -15,4 +16,8 @@ router.get('/perfil', autenticarUsuario, (req, res) => {
 });
 
 router.post('/logout', logout); 
+//router.post('/registro', validarRegistro, authController.registro);
+
+
+
 module.exports = router; 
