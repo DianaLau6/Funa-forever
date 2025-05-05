@@ -1,0 +1,191 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 15px 30px;
+  color: white;
+}
+.headerLeft {
+  width: 40%;
+}
+.headerLeft .logo {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.headerNav {
+  display: flex;
+  gap: 3rem;
+  width: 60%;
+  margin-left: 30px;
+
+}
+
+.headerNav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.headerIcons {
+  display: flex;
+  font-size: 20px;
+  margin-left: 10rem;
+  width: 20%;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  width: 80%;
+  height: 40px;
+}
+
+.icon {
+  color: #ffffff;
+}
+
+.icon2 {
+  color: #746b6b;
+  width: 10%;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* InicioCliente.module.css */
+
+/* Diseño Principal */
+.mainLayout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+
+/* Cursos Recomendados */
+.recommendedContainer {
+  padding: 20px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.coursesGrid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.courseCard {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.courseImage {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+
+/* Cursos actualizados*/
+
+.updatesContainer {
+  padding: 20px;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.updatesGrid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  gap: 1rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.category {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.viewButton {
+  background: green;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.addButton {
+  background: gray;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  margin: 3px;
+}

@@ -1,0 +1,41 @@
+
+.sidebar {
+    width: 300px;
+    background: #468146;
+    color: white;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    height: 90vh;
+  }
+  
+  .sidebarTitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menuItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .menuItem:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .icon {
+    font-size: 30px;
+  }  

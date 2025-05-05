@@ -1,0 +1,45 @@
+.heroContainer {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.heroContent {
+  max-width: 30%;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight:900;
+  color: #000;
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.heroButton {
+  width: 60%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+}
+
+.heroImage{
+  width: 40%;
+}
+.heroImage img {
+  width: 500px;
+  height: auto;
+}
