@@ -37,3 +37,15 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container{
+display: flex;
+background-color:  #4CAF50;
+}
+
+.container{
+  background-color: white;
+  height: 98vh;
+  margin: 5px;
+  border-radius: 40px;
+}

@@ -1,0 +1,20 @@
+import React from 'react';
+import SidebarAdmin from '../../components/Admin/SidebarAdmin';
+import CursosHeader from '../../components/Admin/Cursos/CursosHeader';
+import '../../css/App.css';
+import CursosTable from '../../components/Admin/Cursos/CursosTable';
+
+
+function AdminGestionCursos() {
+  return (
+    <div className="app-container">
+      <SidebarAdmin />
+      <CursosHeader />
+      <CursosTable />
+
+
+    </div>
+  );
+}
+
+  export default AdminGestionCursos;

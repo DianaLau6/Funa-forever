@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './InicioCliente.module.css';
 
 const updates = [

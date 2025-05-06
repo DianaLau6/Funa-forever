@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from '../../css/Sidebar.module.css';
 import { Link } from 'react-router-dom';
 import { FiHome, FiBookOpen, FiBarChart, FiUserCheck } from 'react-icons/fi';

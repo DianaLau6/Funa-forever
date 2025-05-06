@@ -1,0 +1,68 @@
+.sidebar {
+  background-color: #4CAF50;
+  color: white;
+  padding: 2rem 2rem;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  gap: 3rem;
+}
+
+.userSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.avatarContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.notificationDot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.name {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.email {
+  font-size: 0.8rem;
+  color: #e0e0e0;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.navMenu a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+}
+
+.navMenu a:hover,
+.navMenu .active {
+  color: white;
+  font-weight: bold;
+}

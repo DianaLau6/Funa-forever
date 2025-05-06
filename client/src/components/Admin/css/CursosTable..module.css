@@ -1,0 +1,114 @@
+
+.container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  
+  .subtext {
+    color: #4ade80;
+    font-size: 14px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .searchBox {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+  
+  .searchIcon {
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .searchBox input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 6px;
+  }
+  
+  .dropdown {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #f4f4f4;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+  }
+  
+  .status {
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .active {
+    background-color: #d1fae5;
+    color: #047857;
+  }
+  
+  .inactive {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  .pages {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  
+  .pages button {
+    padding: 6px 10px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .activePage {
+    background-color: #4f46e5;
+    color: white;
+  }  
