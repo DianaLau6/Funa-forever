@@ -67,25 +67,11 @@ const Login = () => {
 
           <div className="login-options">
             <div className="option-section">
-              <h3>Email corporativo</h3>
-              <ul className="role-list">
-                <li>Personal</li>
-                <li>Segura persona</li>
-                <li>Suministro de piezas</li>
-                <li>Lugar ✔</li>
-              </ul>
+
             </div>
 
-            <div className="social-login">
-              <button className="google-btn">
-                <img src="" alt="Google" />  
-                Sign in with Google
-              </button>
-              <button className="apple-btn">
-                <img src="" alt="Apple" />
-                Sign in with Apple
-              </button>
-            </div>
+
+
           </div>
 
           <form onSubmit={handleSubmit}>

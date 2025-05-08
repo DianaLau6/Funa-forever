@@ -1,0 +1,35 @@
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #0a5c2f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 1rem;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.course img {
+  width: 40px;
+  margin-right: 0.5rem;
+}

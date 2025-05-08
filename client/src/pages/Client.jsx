@@ -6,7 +6,7 @@ import LatestUpdates from '../components/InicioCliente/LatestUpdates';
 
 
 const Clientinicio = () => (
-    <div className="app-container">
+    <div className="">
       <HeaderClient />
       <MainLayout>
         

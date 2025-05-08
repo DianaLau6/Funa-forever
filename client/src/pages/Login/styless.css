@@ -24,6 +24,7 @@ body {
     align-items: center;
     justify-items: center;
     display: flex;
+    height: 100vh;
 }
 
 .login-box{

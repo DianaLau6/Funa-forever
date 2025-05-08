@@ -5,6 +5,10 @@ import HomePage from './pages/Home';
 import Clientinicio  from './pages/Client';
 import AdminGestionUser from './pages/Admin/AdminGestionUser';
 import AdminGestionCursos from './pages/Admin/AdminGestionCursos';
+import AdminGestionInstructores from './pages/Admin/AdminGestionInstructores';
+import AdminGestionPagos from './pages/Admin/AdminGestionPagos';
+import Comentarios from './pages/Comentarios';
+import Soporte from "./pages/Soporte";
 //import Dashboard from './pages/Dashboard/Dashboard';
 //import ProtectedRoute from './components/ProtectedRoute';
 
@@ -24,7 +28,10 @@ function App() {
 
         <Route path="/Admin/Gestion-Usuario" element={<AdminGestionUser/>} />
         <Route path='/Admin/Gestion-cursos' element={< AdminGestionCursos/>}/>
-
+        <Route path='/admin/Gestion-instructores' element={<AdminGestionInstructores   />} />
+        <Route path='/Admin/Gestion-Pagos' element={<AdminGestionPagos />} />
+        <Route path='/Comentarios' element={<Comentarios />} />
+        <Route path='/Soporte' element={<Soporte />} />
         
     
     

@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const { getUserByEmailWithRole } = require('../model/usermodel');
 const { registrarLogin, registrarLogout } = require('../services/loggerservice');
 
-// authController.js
 const generarToken = (user) => {
     if (!process.env.JWT_SECRET) {
         throw new Error("JWT_SECRET no está definido en .env");
@@ -85,11 +84,11 @@ const logout = async (req, res) => {
 };
 
 const getPantallaPorRol = (rol) => {
-    switch (rol) { // <-- ¡No uses toUpperCase()!
+    switch (rol) { 
         case 'Administrador':
-            return '/dashboard';
+            return '/Admin/Gestion-Usuario';
         case 'Cliente':
-            return '/dashboard/cliente';
+            return '/Cliente-inicio';
         case 'Instructores':
             return '/dashboard/instructores';
         case 'Marketing':

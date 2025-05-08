@@ -9,9 +9,10 @@ function AdminGestionCursos() {
   return (
     <div className="app-container">
       <SidebarAdmin />
-      <CursosHeader />
-      <CursosTable />
-
+      <div className='container'>
+        <CursosHeader />
+        <CursosTable />
+      </div>
 
     </div>
   );

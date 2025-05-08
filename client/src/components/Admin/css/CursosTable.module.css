@@ -1,17 +1,17 @@
 
 .container {
-    background: #fff;
     border-radius: 12px;
-    padding: 20px;
+    padding: 10px;
     font-family: sans-serif;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-top: -10px;
   }
   
   .header {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 16px;
+    margin-left: 7px;
   }
   
   .subtext {
@@ -53,6 +53,9 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
+    color: #555;
+    width: 30%;
+    margin-right: 5px;
   }
   
   .table {
@@ -60,12 +63,17 @@
     border-collapse: collapse;
     margin-top: 16px;
   }
-  
+  th{
+    color: #757474;
+    font-weight: 400;
+  }
   th, td {
     text-align: left;
     padding: 12px;
     border-bottom: 1px solid #f0f0f0;
     font-size: 14px;
+    width: 15%;
+    font-family: monospace;
   }
   
   .status {
@@ -90,6 +98,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    margin-left: 7px;
     font-size: 13px;
     color: #555;
   }

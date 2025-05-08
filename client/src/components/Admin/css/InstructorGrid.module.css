@@ -1,0 +1,38 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 2fr));
+  gap: 10px;
+  margin-left: 20px;
+}
+
+
+.card {
+    width: 280px;
+    border-radius: 16px;
+    height: 220px;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  
+  .info {
+    padding: 12px;
+    font-size: 14px;
+    position: relative;
+  }
+  
+  .editIcon {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  

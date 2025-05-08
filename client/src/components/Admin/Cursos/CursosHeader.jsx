@@ -6,7 +6,7 @@ const CursosHeader = () => {
   return (
     <div className={styles.headerContainer}>
       <div className={styles.topBar}>
-        <h2>Hello Evano <span className={styles.wave}>👋</span>,</h2>
+        <h2>Hello Samantha <span className={styles.wave}>👋</span>,</h2>
         <div className={styles.searchBox}>
           <FaSearch className={styles.searchIcon} />
           <input className={styles.searchInput} type="text" placeholder="Search" />

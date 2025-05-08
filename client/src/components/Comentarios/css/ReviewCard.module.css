@@ -1,0 +1,70 @@
+.card {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 50px;
+    width: 85%;
+  }
+  
+  .title {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 2px;
+    margin: 0.4rem 0;
+    width: 20%;
+  }
+  
+  .comment {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .publishBtn {
+    background-color: #34a853;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-weight: bold;
+    width: 30%;
+    border: 1px solid ;
+  }
+  
+  .publishBtn:hover {
+    background-color: #2c8a45;
+  }  

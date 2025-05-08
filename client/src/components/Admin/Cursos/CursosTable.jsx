@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from '../css/CursosTable.module.css';
-import { FaSearch, FaChevronDown } from 'react-icons/fa';
+import {FaChevronDown } from 'react-icons/fa';
+import Search from './search';
 
 const members = [
-  { name: 'Jane Cooper', tech: 'Python', phone: '(225) 555-0118', email: 'jane@microsoft.com', country: 'United States', status: 'Active' },
-  { name: 'Floyd Miles', tech: 'HTML5', phone: '(205) 555-0100', email: 'floyd@yahoo.com', country: 'Kiribati', status: 'Inactive' },
   { name: 'Ronald Richards', tech: 'C++', phone: '(302) 555-0107', email: 'ronald@adobe.com', country: 'Israel', status: 'Inactive' },
   { name: 'Marvin McKinney', tech: 'C#', phone: '(252) 555-0126', email: 'marvin@tesla.com', country: 'Iran', status: 'Active' },
   { name: 'Jerome Bell', tech: 'React', phone: '(629) 555-0129', email: 'jerome@google.com', country: 'Réunion', status: 'Active' },
@@ -22,10 +21,7 @@ const CursosTable = () => {
           <span className={styles.subtext}>Active Members</span>
         </div>
         <div className={styles.actions}>
-          <div className={styles.searchBox}>
-            <FaSearch className={styles.searchIcon} />
-            <input type="text" placeholder="Search" />
-          </div>
+          <Search />
           <div className={styles.dropdown}>
             <span>Newest</span>
             <FaChevronDown />

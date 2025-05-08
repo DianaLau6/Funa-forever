@@ -1,0 +1,59 @@
+.container {
+    background: url('https://static.vecteezy.com/system/resources/previews/026/546/948/original/night-sky-with-clouds-and-many-stars-abstract-nature-background-with-stardust-in-deep-universe-illustration-vector.jpg') center/cover;
+    padding: 2rem;
+    height: 80vh;
+    align-items: center;
+    justify-items: end;
+  }
+  
+  .slide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 150px;
+  }
+  
+  .photo {
+    width: 40%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 80%;
+  }
+  
+  .content {
+    background: rgba(52, 199, 142, 0.15);
+    padding: 1.5rem;
+    border-radius: 12px;
+    flex: 1;
+    backdrop-filter: blur(10px);
+  }
+  
+  .quote {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  
+  .author strong {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .author p {
+    font-size: 0.875rem;
+    color: #d4d4d4;
+  }
+  
